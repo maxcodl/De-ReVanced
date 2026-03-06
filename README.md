@@ -13,7 +13,7 @@
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9+-7F52FF?style=flat-square&logo=kotlin)](https://kotlinlang.org)
 [![Android](https://img.shields.io/badge/Platform-Android-3DDC84?style=flat-square&logo=android)](https://android.com)
 [![Gradle](https://img.shields.io/badge/Gradle-8.x-02303A?style=flat-square&logo=gradle)](https://gradle.org)
-[![Patches](https://img.shields.io/badge/Patches-13%20Apps-success?style=flat-square)](#supported-apps--patches)
+[![Patches](https://img.shields.io/badge/Patches-17%20Apps-success?style=flat-square)](#supported-apps--patches)
 
 </div>
 
@@ -41,12 +41,15 @@
 
 | App | Package | Patches |
 | :--- | :--- | :--- |
+| Amazon Shopping | `com.amazon.mShop.android.shopping` | <ul><li>Always allow deep-linking</li></ul> |
 | Cricbuzz | `com.cricbuzz.android` | <ul><li>Disable ads</li><li>Extension</li></ul> |
 | Disney+ | `com.disney.disneyplus` | <ul><li>Skip ads</li></ul> |
 | Google News | `com.google.android.apps.magazines` | <ul><li>Custom tabs</li><li>GMS support</li><li>Extension</li></ul> |
 | Google Photos | `com.google.android.apps.photos` | <ul><li>Spoof features</li><li>Backup control</li><li>GMS support</li><li>Extension</li><li>Restore backup toggle</li></ul> |
 | Icon Pack Studio | `ginlemon.iconpackstudio` | <ul><li>Unlock Pro</li></ul> |
+| Inshorts | `com.nis.app` | <ul><li>Hide ads</li></ul> |
 | Letterboxd | `com.letterboxd.letterboxd` | <ul><li>Hide ads</li><li>Unlock app icons</li></ul> |
+| Messenger | `com.facebook.orca` | <ul><li>Disable typing indicator</li><li>Hide inbox ads</li><li>Hide inbox subtabs</li><li>Hide Facebook button</li><li>Remove Meta AI</li></ul> |
 | Microsoft Lens | `com.microsoft.office.officelens` | <ul><li>Hide OneDrive migration</li></ul> |
 | Photomath | `com.microblink.photomath` | <ul><li>Spoof device ID</li><li>Signature detection</li><li>Unlock Plus</li><li>Bookpoint</li><li>Hide update popup</li></ul> |
 | Pixiv | `jp.pxv.android` | <ul><li>Hide ads</li></ul> |
