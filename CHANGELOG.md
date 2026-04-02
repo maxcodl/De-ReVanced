@@ -1,3 +1,22 @@
+## [1.0.3](https://github.com/RookieEnough/De-ReVanced/compare/v1.0.2...v1.0.3) (2026-04-02)
+
+
+### Bug Fixes
+
+* release v1.0.3 with Google Recorder fix ([c03c701](https://github.com/RookieEnough/De-ReVanced/commit/c03c701a6ba658afb4f4f2093faca9e6bc91e49c))
+
+
+
+
+
+### Bug Fixes
+
+* **Google Recorder — Remove device restrictions:** fingerprint and bytecode hook updated for current app builds — match `RecorderApplication.onCreate` without a fixed feature string, detect any `com.google.android.feature…PIXEL…` `const-string`, and apply the restriction bypass (fixes fingerprint mismatch on newer Recorder versions).
+
+### Maintenance
+
+* **Attribution:** add a standard `Forked from` source header across Kotlin sources that were still missing it.
+
 ## [1.0.2](https://github.com/RookieEnough/De-ReVanced/compare/v1.0.1...v1.0.2) (2026-04-02)
 
 
