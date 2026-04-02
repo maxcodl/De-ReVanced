@@ -1,8 +1,7 @@
 /*
  * Forked from:
- * https://github.com/ReVanced/revanced-patches/blob/80ff578e21fce1b9825f2f7820d8d910e85f8822/patches/src/main/kotlin/app/revanced/patches/amznmusic/misc/unlimited/UnlockUnlimitedPatch.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/amznmusic/misc/unlimited/UnlockUnlimitedPatch.kt
  */
-
 package app.morphe.patches.amznmusic.misc.unlimited
 
 import app.morphe.patcher.Fingerprint

@@ -1,8 +1,7 @@
 /*
  * Forked from:
- * https://gitlab.com/ReVanced/revanced-patches/-/raw/main/patches/src/main/kotlin/app/revanced/patches/twitch/chat/antidelete/ShowDeletedMessagesPatch.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/twitch/chat/antidelete/ShowDeletedMessagesPatch.kt
  */
-
 package app.morphe.patches.twitch.chat.antidelete
 
 import app.morphe.patches.shared.compat.AppCompatibilities

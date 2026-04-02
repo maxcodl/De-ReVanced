@@ -1,6 +1,6 @@
 /*
  * Forked from:
- * https://gitlab.com/ReVanced/ravanced-patches/-/raw/main/patches/src/main/kotlin/app/revanced/patches/nothingx/misc/logk1token/ShowK1TokenPatchs.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/nothingx/misc/logk1token/ShowK1TokenPatch.kt
  */
 package app.morphe.patches.nothingx.misc.logk1token
 

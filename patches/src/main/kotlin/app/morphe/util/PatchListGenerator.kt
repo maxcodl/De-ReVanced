@@ -31,6 +31,11 @@
  * applicable to this file.
  */
 
+
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/util/PatchListGenerator.kt
+ */
 package app.morphe.util
 
 import app.morphe.patcher.patch.AppTarget

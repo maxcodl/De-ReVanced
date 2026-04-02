@@ -1,8 +1,7 @@
 /*
  * Forked from:
- * https://gitlab.com/ReVanced/revanced-patches/-/raw/main/patches/src/main/kotlin/app/revanced/patches/photoshopmix/Fingerprints.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/photoshopmix/Fingerprints.kt
  */
-
 package app.morphe.patches.photoshopmix
 
 import app.morphe.patcher.Fingerprint

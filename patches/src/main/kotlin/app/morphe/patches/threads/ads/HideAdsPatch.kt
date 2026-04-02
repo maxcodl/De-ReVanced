@@ -1,8 +1,7 @@
 /*
  * Forked from:
- * https://gitlab.com/ReVanced/revanced-patches/-/raw/main/patches/src/main/kotlin/app/revanced/patches/threads/HideAdsPatch.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/threads/ads/HideAdsPatch.kt
  */
-
 package app.morphe.patches.threads.ads
 
 import app.morphe.patches.shared.compat.AppCompatibilities

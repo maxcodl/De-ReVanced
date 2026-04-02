@@ -3,7 +3,7 @@
  * https://github.com/MorpheApp/morphe-patches
  *
  * Original code hard forked from:
- * https://github.com/ReVanced/revanced-patches/blob/bd2a939a72e0106b14bd67f46bec646b53a0a0d4/patches/src/main/kotlin/app/revanced/util/ResourceUtils.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/util/ResourceUtils.kt
  *
  * File-Specific License Notice (GPLv3 Section 7 Terms)
  *
@@ -34,6 +34,11 @@
  * applicable to this file.
  */
 
+
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/util/ResourceUtils.kt
+ */
 package app.morphe.util
 
 import app.morphe.patcher.patch.PatchException

@@ -1,3 +1,7 @@
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/gmxmail/layout/HidePremiumUpgradeButton.kt
+ */
 package app.morphe.patches.gmxmail.layout
 
 import app.morphe.patches.shared.compat.AppCompatibilities

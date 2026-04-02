@@ -1,3 +1,7 @@
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/all/misc/transformation/MethodCall.kt
+ */
 package app.morphe.patches.all.misc.transformation
 
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
