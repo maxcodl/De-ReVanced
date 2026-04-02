@@ -1,8 +1,7 @@
 /*
  * Forked from:
- * https://github.com/ReVanced/revanced-patches/blob/b44ac9b26f13a561eac6819e794c9bf1998081b1/patches/src/main/kotlin/app/revanced/patches/amznmusic/misc/skips/UnlimitedSkipsPatch.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/amznmusic/misc/skips/UnlimitedSkipsPatch.kt
  */
-
 package app.morphe.patches.amznmusic.misc.skips
 
 import app.morphe.patcher.Fingerprint

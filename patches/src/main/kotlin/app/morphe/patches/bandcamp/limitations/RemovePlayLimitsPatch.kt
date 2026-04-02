@@ -1,3 +1,7 @@
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/bandcamp/limitations/RemovePlayLimitsPatch.kt
+ */
 package app.morphe.patches.bandcamp.limitations
 
 import app.morphe.patches.shared.compat.AppCompatibilities

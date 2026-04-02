@@ -1,3 +1,7 @@
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/shared/layout/theme/LithoColorHookPatch.kt
+ */
 package app.morphe.patches.shared.layout.theme
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions

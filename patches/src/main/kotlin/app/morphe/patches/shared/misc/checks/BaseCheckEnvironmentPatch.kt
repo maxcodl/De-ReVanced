@@ -1,3 +1,7 @@
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/shared/misc/checks/BaseCheckEnvironmentPatch.kt
+ */
 package app.morphe.patches.shared.misc.checks
 
 import android.os.Build.BOARD

@@ -1,9 +1,13 @@
 /*
  * Forked from:
- * https://github.com/ReVanced/revanced-patches/blob/80ff578e21fce1b9825f2f7820d8d910e85f8822/patches/src/main/kotlin/app/revanced/patches/amznmusic/misc/extension/ExtensionPatch.kt
- * https://github.com/ReVanced/revanced-patches/blob/80ff578e21fce1b9825f2f7820d8d910e85f8822/patches/src/main/kotlin/app/revanced/patches/amznmusic/misc/extension/Hooks.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/amznmusic/misc/extension/ExtensionPatch.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/amznmusic/misc/extension/Hooks.kt
  */
 
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/amznmusic/misc/extension/SharedExtensionPatch.kt
+ */
 package app.morphe.patches.amznmusic.misc.extension
 
 import app.morphe.patcher.Fingerprint

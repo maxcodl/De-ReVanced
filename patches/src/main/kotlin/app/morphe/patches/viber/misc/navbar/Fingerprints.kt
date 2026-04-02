@@ -1,6 +1,6 @@
 /*
  * Forked from:
- * https://gitlab.com/ReVanced/ravanced-patches/-/raw/main/patches/src/main/kotlin/app/revanced/patches/viber/misc/navbar/Fingerprints.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/viber/misc/navbar/Fingerprints.kt
  */
 package app.morphe.patches.viber.misc.navbar
 

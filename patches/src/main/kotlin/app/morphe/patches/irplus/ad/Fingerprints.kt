@@ -1,3 +1,7 @@
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/irplus/ad/Fingerprints.kt
+ */
 package app.morphe.patches.irplus.ad
 
 import app.morphe.patcher.Fingerprint

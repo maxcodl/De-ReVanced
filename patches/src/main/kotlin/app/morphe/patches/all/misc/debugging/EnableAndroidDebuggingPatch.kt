@@ -1,3 +1,7 @@
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/all/misc/debugging/EnableAndroidDebuggingPatch.kt
+ */
 package app.morphe.patches.all.misc.debugging
 
 import app.morphe.patcher.patch.resourcePatch

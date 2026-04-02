@@ -1,8 +1,7 @@
 /*
  * Forked from:
- * https://github.com/ReVanced/revanced-patches/blob/377d4e15016296b45d809697f7f69bce74badd3a/patches/src/main/kotlin/app/revanced/patches/tiktok/interaction/downloads/DownloadsPatch.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/tiktok/interaction/downloads/DownloadsPatch.kt
  */
-
 package app.morphe.patches.tiktok.interaction.downloads
 
 import app.morphe.patches.shared.compat.AppCompatibilities

@@ -1,3 +1,7 @@
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/util/resource/ArrayResource.kt
+ */
 package app.morphe.util.resource
 
 import app.morphe.util.childElementsSequence

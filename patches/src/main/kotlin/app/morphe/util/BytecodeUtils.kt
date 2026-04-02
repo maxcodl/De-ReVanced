@@ -3,7 +3,7 @@
  * https://github.com/MorpheApp/morphe-patches
  *
  * Original code hard forked from:
- * https://github.com/ReVanced/revanced-patches/blob/724e6d61b2ecd868c1a9a37d465a688e83a74799/patches/src/main/kotlin/app/revanced/util/BytecodeUtils.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/util/BytecodeUtils.kt
  *
  * File-Specific License Notice (GPLv3 Section 7 Terms)
  *
@@ -34,6 +34,11 @@
  * applicable to this file.
  */
 
+
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/util/BytecodeUtils.kt
+ */
 package app.morphe.util
 
 import app.morphe.patcher.Fingerprint

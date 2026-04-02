@@ -1,3 +1,7 @@
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/shared/meta/ads/Fingerprints.kt
+ */
 package app.morphe.patches.shared.meta.ads
 
 import app.morphe.patcher.Fingerprint

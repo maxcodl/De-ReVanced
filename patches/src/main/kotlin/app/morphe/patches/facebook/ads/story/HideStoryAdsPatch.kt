@@ -1,8 +1,7 @@
 /*
  * Forked from:
- * https://gitlab.com/ReVanced/revanced-patches/-/raw/main/patches/src/main/kotlin/app/revanced/patches/facebook/ads/story/HideStoryAdsPatch.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/facebook/ads/story/HideStoryAdsPatch.kt
  */
-
 package app.morphe.patches.facebook.ads.story
 
 import app.morphe.patches.shared.compat.AppCompatibilities

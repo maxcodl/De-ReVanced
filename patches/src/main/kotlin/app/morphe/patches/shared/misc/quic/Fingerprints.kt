@@ -3,6 +3,11 @@
  * https://github.com/MorpheApp/morphe-patches
  */
 
+
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/shared/misc/quic/Fingerprints.kt
+ */
 package app.morphe.patches.shared.misc.quic
 
 import app.morphe.patcher.Fingerprint

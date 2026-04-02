@@ -1,3 +1,7 @@
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/shared/misc/settings/preference/PreferenceCategory.kt
+ */
 package app.morphe.patches.shared.misc.settings.preference
 
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting

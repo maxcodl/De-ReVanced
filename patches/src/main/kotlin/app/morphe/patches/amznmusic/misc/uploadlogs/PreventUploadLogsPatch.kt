@@ -1,8 +1,7 @@
 /*
  * Forked from:
- * https://github.com/ReVanced/revanced-patches/blob/2d7cf86bfd2dbc16f864ce37257f13ad3c08a35f/patches/src/main/kotlin/app/revanced/patches/amznmusic/misc/uploadlogs/PreventUploadLogsPatch.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/amznmusic/misc/uploadlogs/PreventUploadLogsPatch.kt
  */
-
 package app.morphe.patches.amznmusic.misc.uploadlogs
 
 import app.morphe.patcher.Fingerprint

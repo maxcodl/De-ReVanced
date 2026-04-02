@@ -1,3 +1,7 @@
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/shared/misc/settings/Fingerprints.kt
+ */
 package app.morphe.patches.shared.misc.settings
 
 import app.morphe.patcher.Fingerprint

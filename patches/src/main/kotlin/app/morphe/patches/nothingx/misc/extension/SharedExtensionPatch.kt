@@ -1,6 +1,6 @@
 /*
  * Forked from:
- * https://gitlab.com/ReVanced/ravanced-patches/-/raw/main/patches/src/main/kotlin/app/revanced/patches/nothingx/misc/extension/SharedExtensionPatch.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/nothingx/misc/extension/SharedExtensionPatch.kt
  */
 package app.morphe.patches.nothingx.misc.extension
 

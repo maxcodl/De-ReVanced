@@ -31,6 +31,11 @@
  * applicable to this file.
  */
 
+
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/util/resource/CheckStringResources.kt
+ */
 package app.morphe.util.resource
 
 import app.morphe.patches.all.misc.resources.StringResourceSanitizer.sanitizeAndroidResourceString

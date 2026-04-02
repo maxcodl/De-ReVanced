@@ -1,8 +1,7 @@
 /*
  * Forked from:
- * https://gitlab.com/ReVanced/revanced-patches/-/raw/main/patches/src/main/kotlin/app/revanced/patches/twitch/debug/Fingerprints.kt
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/twitch/debug/Fingerprints.kt
  */
-
 package app.morphe.patches.twitch.debug
 
 import app.morphe.patcher.Fingerprint

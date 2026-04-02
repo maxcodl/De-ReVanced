@@ -31,6 +31,11 @@
  * applicable to this file.
  */
 
+
+/*
+ * Forked from:
+ * https://gitlab.com/ReVanced/revanced-patches/-/blob/main/patches/src/main/kotlin/app/revanced/patches/all/misc/resources/AddResourcesPatch.kt
+ */
 package app.morphe.patches.all.misc.resources
 
 import app.morphe.patcher.patch.resourcePatch
