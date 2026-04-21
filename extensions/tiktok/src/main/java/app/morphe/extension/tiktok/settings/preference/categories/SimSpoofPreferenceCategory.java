@@ -56,18 +56,14 @@ public class SimSpoofPreferenceCategory extends ConditionalPreferenceCategory {
                 "Spoof latitude and longitude values used by app location checks.",
                 Settings.LOCATION_SPOOF
         ));
-        addPreference(new CountryLocationPreference(
-                context,
-                Settings.LOCATION_SPOOF_COUNTRY
-        ));
         addPreference(new InputTextPreference(
                 context,
-                "Custom latitude", "Used when Country preset is Custom.",
+                "Latitude", "e.g. 37.7749",
                 Settings.LOCATION_SPOOF_LAT
         ));
         addPreference(new InputTextPreference(
                 context,
-                "Custom longitude", "Used when Country preset is Custom.",
+                "Longitude", "e.g. -122.4194",
                 Settings.LOCATION_SPOOF_LON
         ));
     }
