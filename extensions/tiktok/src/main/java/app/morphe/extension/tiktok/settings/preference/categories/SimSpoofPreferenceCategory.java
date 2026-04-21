@@ -10,6 +10,7 @@ import android.preference.PreferenceScreen;
 
 import app.morphe.extension.tiktok.settings.Settings;
 import app.morphe.extension.tiktok.settings.SettingsStatus;
+import app.morphe.extension.tiktok.settings.preference.CountryLocationPreference;
 import app.morphe.extension.tiktok.settings.preference.InputTextPreference;
 import app.morphe.extension.tiktok.settings.preference.TogglePreference;
 
