@@ -25,9 +25,12 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting DOWNLOAD_WATERMARK = new BooleanSetting("down_watermark", TRUE);
     public static final BooleanSetting CLEAR_DISPLAY = new BooleanSetting("clear_display", FALSE);
     public static final FloatSetting REMEMBERED_SPEED = new FloatSetting("REMEMBERED_SPEED", 1.0f);
-    public static final BooleanSetting SIM_SPOOF = new BooleanSetting("simspoof", FALSE, true);
+    public static final BooleanSetting SIM_SPOOF = new BooleanSetting("simspoof", TRUE, true);
     public static final StringSetting SIM_SPOOF_ISO = new StringSetting("simspoof_iso", "us");
     public static final StringSetting SIMSPOOF_MCCMNC = new StringSetting("simspoof_mccmnc", "310160");
     public static final StringSetting SIMSPOOF_OP_NAME = new StringSetting("simspoof_op_name", "T-Mobile");
+    public static final BooleanSetting LOCATION_SPOOF = new BooleanSetting("location_spoof", TRUE, true);
+    public static final StringSetting LOCATION_SPOOF_COUNTRY = new StringSetting("location_spoof_country", "us");
+    public static final StringSetting LOCATION_SPOOF_LAT = new StringSetting("location_spoof_lat", "37.7749");
+    public static final StringSetting LOCATION_SPOOF_LON = new StringSetting("location_spoof_lon", "-122.4194");
 }
-
