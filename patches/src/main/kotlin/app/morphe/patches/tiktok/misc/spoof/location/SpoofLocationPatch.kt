@@ -16,7 +16,6 @@ import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
 private const val SPOOF_LOCATION_CLASS_DESCRIPTOR = "Lapp/morphe/extension/tiktok/spoof/location/SpoofLocationPatch;"
 private const val LOCATION_CLASS_DESCRIPTOR = "Landroid/location/Location;"
-private const val LOCALE_CLASS_DESCRIPTOR = "Ljava/util/Locale;"
 
 @Suppress("unused")
 val spoofLocationPatch = bytecodePatch(
@@ -37,43 +36,28 @@ val spoofLocationPatch = bytecodePatch(
             "invoke-static {}, Lapp/morphe/extension/tiktok/settings/SettingsStatus;->enableLocationSpoof()V",
         )
 
-        val locationReplacements = hashMapOf(
+        val replacements = hashMapOf(
             "getLatitude" to "getLatitude",
             "getLongitude" to "getLongitude",
-        )
-        val localeReplacements = hashMapOf(
-            "getCountry" to "getCountryCode",
-            "getISO3Country" to "getIso3Country",
         )
 
         classDefForEach { classDef ->
             classDef.methods.forEach methodLoop@{ method ->
-                val instructions = method.implementation?.instructions ?: return@methodLoop
-                val instructionList = instructions.toList()
+                val instructions = method.implementation?.instructions?.toList() ?: return@methodLoop
                 val patchIndices = ArrayDeque<Pair<Int, String>>()
 
-                instructionList.forEachIndexed { index, instruction ->
+                instructions.forEachIndexed { index, instruction ->
                     if (instruction.opcode != Opcode.INVOKE_VIRTUAL) return@forEachIndexed
 
                     val methodRef = (instruction as? Instruction35c)?.reference as? MethodReference ?: return@forEachIndexed
-                    if (methodRef.definingClass == LOCATION_CLASS_DESCRIPTOR && methodRef.returnType == "D") {
-                        val moveResult = instructionList.getOrNull(index + 1) ?: return@forEachIndexed
-                        if (moveResult.opcode != Opcode.MOVE_RESULT_WIDE) return@forEachIndexed
+                    if (methodRef.definingClass != LOCATION_CLASS_DESCRIPTOR) return@forEachIndexed
+                    if (methodRef.returnType != "D") return@forEachIndexed
 
-                        locationReplacements[methodRef.name]?.let { replacement ->
-                            patchIndices.add(index to replacement)
-                        }
-                        return@forEachIndexed
-                    }
+                    val moveResult = instructions.getOrNull(index + 1) ?: return@forEachIndexed
+                    if (moveResult.opcode != Opcode.MOVE_RESULT_WIDE) return@forEachIndexed
 
-                    if (methodRef.definingClass == LOCALE_CLASS_DESCRIPTOR && methodRef.returnType == "Ljava/lang/String;") {
-                        val moveResult = instructionList.getOrNull(index + 1) ?: return@forEachIndexed
-                        if (moveResult.opcode != Opcode.MOVE_RESULT_OBJECT) return@forEachIndexed
-
-                        localeReplacements[methodRef.name]?.let { replacement ->
-                            patchIndices.add(index to replacement)
-                        }
-                        return@forEachIndexed
+                    replacements[methodRef.name]?.let { replacement ->
+                        patchIndices.add(index to replacement)
                     }
                 }
 
@@ -82,33 +66,16 @@ val spoofLocationPatch = bytecodePatch(
                 val mutableMethod = mutableClassDefBy(classDef).findMutableMethodOf(method)
                 while (patchIndices.isNotEmpty()) {
                     val (index, replacement) = patchIndices.removeLast()
-                    val moveResultOpcode = mutableMethod.getInstruction(index + 1).opcode
+                    val resultRegister = mutableMethod.getInstruction<OneRegisterInstruction>(index + 1).registerA
+                    val resultRegisterHigh = resultRegister + 1
 
-                    if (moveResultOpcode == Opcode.MOVE_RESULT_WIDE) {
-                        val resultRegister = mutableMethod.getInstruction<OneRegisterInstruction>(index + 1).registerA
-                        val resultRegisterHigh = resultRegister + 1
-
-                        mutableMethod.addInstructions(
-                            index + 2,
-                            """
-                                invoke-static/range {v$resultRegister .. v$resultRegisterHigh}, $SPOOF_LOCATION_CLASS_DESCRIPTOR->$replacement(D)D
-                                move-result-wide v$resultRegister
-                            """,
-                        )
-                    } else if (moveResultOpcode == Opcode.MOVE_RESULT_OBJECT) {
-                        val resultRegister = mutableMethod.getInstruction<OneRegisterInstruction>(index + 1).registerA
-
-                        mutableMethod.addInstructions(
-                            index + 2,
-                            """
-                                invoke-static {v$resultRegister}, $SPOOF_LOCATION_CLASS_DESCRIPTOR->$replacement(Ljava/lang/String;)Ljava/lang/String;
-                                move-result-object v$resultRegister
-                            """,
-                        )
-                    } else {
-                        // Unsupported move-result opcode; skip this injection point.
-                        continue
-                    }
+                    mutableMethod.addInstructions(
+                        index + 2,
+                        """
+                            invoke-static/range {v$resultRegister .. v$resultRegisterHigh}, $SPOOF_LOCATION_CLASS_DESCRIPTOR->$replacement(D)D
+                            move-result-wide v$resultRegister
+                        """,
+                    )
                 }
             }
         }
