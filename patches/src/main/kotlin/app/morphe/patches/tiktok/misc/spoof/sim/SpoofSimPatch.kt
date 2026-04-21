@@ -4,7 +4,6 @@
  */
 package app.morphe.patches.tiktok.misc.spoof.sim
 
-import app.morphe.patcher.extensions.ClassDefExtensions.firstMethod
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
@@ -49,7 +48,7 @@ val spoofSimPatch = bytecodePatch(
             "getNetworkOperatorName" to "getOperatorName",
         )
 
-        classDefs.forEach classDef@{ classDef ->
+        classDefForEach classDef@{ classDef ->
             val classMethods = classDef.methods
             classMethods.forEach methodLoop@{ method ->
                 val instructions = method.implementation?.instructions ?: return@methodLoop
@@ -68,7 +67,11 @@ val spoofSimPatch = bytecodePatch(
 
                 if (patchIndices.isEmpty()) return@methodLoop
 
-                val mutableMethod = classDef.firstMethod(method)
+                val mutableMethod = mutableClassDefBy(classDef).methods.first { 
+                    it.name == method.name && 
+                    it.returnType == method.returnType && 
+                    it.parameterTypes == method.parameterTypes 
+                }
                 while (patchIndices.isNotEmpty()) {
                     val (index, replacement) = patchIndices.removeLast()
                     val resultRegister = mutableMethod.getInstruction<OneRegisterInstruction>(index + 1).registerA
