@@ -22,7 +22,7 @@ public class SimSpoofPreferenceCategory extends ConditionalPreferenceCategory {
 
     @Override
     public boolean getSettingsStatus() {
-        return SettingsStatus.simSpoofEnabled;
+        return SettingsStatus.simSpoofEnabled || SettingsStatus.locationSpoofEnabled;
     }
 
     @Override
@@ -48,6 +48,22 @@ public class SimSpoofPreferenceCategory extends ConditionalPreferenceCategory {
                 "Operator name", "Name of the operator.",
                 Settings.SIMSPOOF_OP_NAME
         ));
+
+        addPreference(new TogglePreference(
+                context,
+                "Fake location",
+                "Spoof latitude and longitude values used by app location checks.",
+                Settings.LOCATION_SPOOF
+        ));
+        addPreference(new InputTextPreference(
+                context,
+                "Latitude", "e.g. 37.7749",
+                Settings.LOCATION_SPOOF_LAT
+        ));
+        addPreference(new InputTextPreference(
+                context,
+                "Longitude", "e.g. -122.4194",
+                Settings.LOCATION_SPOOF_LON
+        ));
     }
 }
-
