@@ -43,7 +43,7 @@ val spoofLocationPatch = bytecodePatch(
 
         classDefForEach { classDef ->
             classDef.methods.forEach methodLoop@{ method ->
-                val instructions = method.implementation?.instructions ?: return@methodLoop
+                val instructions = method.implementation?.instructions?.toList() ?: return@methodLoop
                 val patchIndices = ArrayDeque<Pair<Int, String>>()
 
                 instructions.forEachIndexed { index, instruction ->
