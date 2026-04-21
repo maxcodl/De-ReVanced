@@ -12,6 +12,7 @@ import app.morphe.patches.shared.compat.AppCompatibilities
 import app.morphe.patches.tiktok.misc.extension.sharedExtensionPatch
 import app.morphe.patches.tiktok.misc.settings.SettingsStatusLoadFingerprint
 import app.morphe.patches.tiktok.misc.settings.settingsPatch
+import app.morphe.util.findMutableMethodOf
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction35c
@@ -67,11 +68,7 @@ val spoofSimPatch = bytecodePatch(
 
                 if (patchIndices.isEmpty()) return@methodLoop
 
-                val mutableMethod = mutableClassDefBy(classDef).methods.first { 
-                    it.name == method.name && 
-                    it.returnType == method.returnType && 
-                    it.parameterTypes == method.parameterTypes 
-                }
+                val mutableMethod = mutableClassDefBy(classDef).findMutableMethodOf(method)
                 while (patchIndices.isNotEmpty()) {
                     val (index, replacement) = patchIndices.removeLast()
                     val resultRegister = mutableMethod.getInstruction<OneRegisterInstruction>(index + 1).registerA
