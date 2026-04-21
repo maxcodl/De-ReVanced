@@ -10,6 +10,7 @@ import android.preference.PreferenceScreen;
 
 import app.morphe.extension.tiktok.settings.Settings;
 import app.morphe.extension.tiktok.settings.SettingsStatus;
+import app.morphe.extension.tiktok.settings.preference.CountryLocationPreference;
 import app.morphe.extension.tiktok.settings.preference.InputTextPreference;
 import app.morphe.extension.tiktok.settings.preference.TogglePreference;
 
@@ -22,7 +23,7 @@ public class SimSpoofPreferenceCategory extends ConditionalPreferenceCategory {
 
     @Override
     public boolean getSettingsStatus() {
-        return SettingsStatus.simSpoofEnabled;
+        return SettingsStatus.simSpoofEnabled || SettingsStatus.locationSpoofEnabled;
     }
 
     @Override
@@ -48,6 +49,26 @@ public class SimSpoofPreferenceCategory extends ConditionalPreferenceCategory {
                 "Operator name", "Name of the operator.",
                 Settings.SIMSPOOF_OP_NAME
         ));
+
+        addPreference(new TogglePreference(
+                context,
+                "Fake location",
+                "Spoof latitude and longitude values used by app location checks.",
+                Settings.LOCATION_SPOOF
+        ));
+        addPreference(new CountryLocationPreference(
+                context,
+                Settings.LOCATION_SPOOF_COUNTRY
+        ));
+        addPreference(new InputTextPreference(
+                context,
+                "Custom latitude", "Used when Country preset is Custom.",
+                Settings.LOCATION_SPOOF_LAT
+        ));
+        addPreference(new InputTextPreference(
+                context,
+                "Custom longitude", "Used when Country preset is Custom.",
+                Settings.LOCATION_SPOOF_LON
+        ));
     }
 }
-
