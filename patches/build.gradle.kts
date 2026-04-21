@@ -43,6 +43,16 @@ tasks {
         classpath = sourceSets["main"].runtimeClasspath
         mainClass.set("app.morphe.util.PatchListGeneratorKt")
     }
+
+    register<JavaExec>("generateTiktokPatchesList") {
+        description = "Build patch with TikTok-only patch list"
+
+        dependsOn(build)
+
+        classpath = sourceSets["main"].runtimeClasspath
+        mainClass.set("app.morphe.util.PatchListGeneratorKt")
+        systemProperty("morphe.tiktokOnly", "true")
+    }
     // Used by gradle-semantic-release-plugin.
     publish {
         dependsOn("generatePatchesList")

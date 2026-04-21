@@ -9,6 +9,7 @@ public class SettingsStatus {
     public static boolean feedFilterEnabled = false;
     public static boolean downloadEnabled = false;
     public static boolean simSpoofEnabled = false;
+    public static boolean locationSpoofEnabled = false;
 
     public static void enableFeedFilter() {
         feedFilterEnabled = true;
@@ -22,7 +23,10 @@ public class SettingsStatus {
         simSpoofEnabled = true;
     }
 
+    public static void enableLocationSpoof() {
+        locationSpoofEnabled = true;
+    }
+
     public static void load() {
     }
 }
-
