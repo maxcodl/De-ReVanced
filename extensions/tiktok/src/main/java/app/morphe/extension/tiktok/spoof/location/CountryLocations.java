@@ -67,7 +67,13 @@ public final class CountryLocations {
 
     public static String[] getCountryEntries() {
         String[] countries = Locale.getISOCountries();
-        Arrays.sort(countries, Comparator.comparing(code -> new Locale("", code).getDisplayCountry(Locale.ENGLISH)));
+        Arrays.sort(countries, new Comparator<String>() {
+            @Override
+            public int compare(String code1, String code2) {
+                return new Locale("", code1).getDisplayCountry(Locale.ENGLISH)
+                        .compareTo(new Locale("", code2).getDisplayCountry(Locale.ENGLISH));
+            }
+        });
 
         String[] entries = new String[countries.length + 1];
         entries[0] = "Custom location";
@@ -80,7 +86,13 @@ public final class CountryLocations {
 
     public static String[] getCountryValues() {
         String[] countries = Locale.getISOCountries();
-        Arrays.sort(countries, Comparator.comparing(code -> new Locale("", code).getDisplayCountry(Locale.ENGLISH)));
+        Arrays.sort(countries, new Comparator<String>() {
+            @Override
+            public int compare(String code1, String code2) {
+                return new Locale("", code1).getDisplayCountry(Locale.ENGLISH)
+                        .compareTo(new Locale("", code2).getDisplayCountry(Locale.ENGLISH));
+            }
+        });
 
         String[] values = new String[countries.length + 1];
         values[0] = CUSTOM;
