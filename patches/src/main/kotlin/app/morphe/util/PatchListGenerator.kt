@@ -51,6 +51,11 @@ import java.util.jar.Manifest
 typealias PackageName = String
 typealias VersionName = String
 
+private val tiktokPackageNames = setOf(
+    "com.zhiliaoapp.musically",
+    "com.ss.android.ugc.trill",
+)
+
 internal fun main() {
     val patchFiles = setOf(
         File("build/libs/").listFiles { file ->
@@ -61,6 +66,16 @@ internal fun main() {
         }!!.first()
     )
     val loadedPatches = loadPatchesFromJar(patchFiles)
+    val tiktokOnly = System.getProperty("morphe.tiktokOnly", "false").toBoolean()
+    val filteredPatches = if (tiktokOnly) {
+        loadedPatches.filterTo(mutableSetOf()) { patch ->
+            patch.compatibility
+                .orEmpty()
+                .any { compatibility -> compatibility.packageName in tiktokPackageNames }
+        }
+    } else {
+        loadedPatches
+    }
     val patchClassLoader = URLClassLoader(patchFiles.map { it.toURI().toURL() }.toTypedArray())
     val manifest = patchClassLoader.getResources("META-INF/MANIFEST.MF")
 
@@ -69,7 +84,7 @@ internal fun main() {
             .mainAttributes
             .getValue("Version")
             ?.let {
-                generatePatchList(it, loadedPatches)
+                generatePatchList(it, filteredPatches, tiktokOnly)
             }
     }
 }
@@ -80,8 +95,8 @@ internal fun main() {
  * and options. Requires morphe-patcher 1.3.x and `compatibleWith(Compatibility(...))` in patches.
  */
 @Suppress("DEPRECATION")
-private fun generatePatchList(version: String, patches: Set<Patch<*>>) {
-    val listJson = File("../patches-list.json")
+private fun generatePatchList(version: String, patches: Set<Patch<*>>, tiktokOnly: Boolean) {
+    val listJson = if (tiktokOnly) File("../patches-list-tiktok.json") else File("../patches-list.json")
 
     val appNames = patches
         .asSequence()
@@ -179,4 +194,3 @@ private class JsonPatch(
         val values: Map<String, Any?>?,
     )
 }
-
