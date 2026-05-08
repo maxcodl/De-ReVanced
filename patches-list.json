@@ -25,6 +25,7 @@
     "com.microblink.photomath": "Photomath",
     "com.adobe.photoshopmix": "Photoshop Mix",
     "jp.pxv.android": "Pixiv",
+    "org.telegram.plus": "Plus Messenger",
     "ch.protonmail.android": "Proton Mail",
     "com.rarlab.rar": "RAR",
     "com.soundcloud.android": "SoundCloud",
@@ -1848,6 +1849,32 @@
             },
             {
               "version": "43.8.3",
+              "experimental": false
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Plus Messenger patches",
+      "description": "Ports the Python Plus Messenger patcher to Morphe Manager: premium checks, story privacy, forwarding/saving restrictions, screenshots, sponsored content, banned channel access, secret media, and download parameter tweaks.",
+      "use": true,
+      "dependencies": [
+        "BytecodePatch"
+      ],
+      "compatiblePackages": {
+        "org.telegram.plus": null
+      },
+      "compatibility": [
+        {
+          "name": "Plus Messenger",
+          "packageName": "org.telegram.plus",
+          "description": null,
+          "appIconColor": 2201331,
+          "targets": [
+            {
+              "version": "",
               "experimental": false
             }
           ]
