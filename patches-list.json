@@ -1743,6 +1743,50 @@
       "options": []
     },
     {
+      "name": "Location spoof",
+      "description": "Spoofs location values returned by Android Location APIs. Supports TikTok 43.6.2.",
+      "use": true,
+      "dependencies": [
+        "BytecodePatch",
+        "BytecodePatch"
+      ],
+      "compatiblePackages": {
+        "com.ss.android.ugc.trill": [
+          "43.6.2"
+        ],
+        "com.zhiliaoapp.musically": [
+          "43.6.2"
+        ]
+      },
+      "compatibility": [
+        {
+          "name": "TikTok (JP)",
+          "packageName": "com.ss.android.ugc.trill",
+          "description": null,
+          "appIconColor": 16657493,
+          "targets": [
+            {
+              "version": "43.6.2",
+              "experimental": false
+            }
+          ]
+        },
+        {
+          "name": "TikTok",
+          "packageName": "com.zhiliaoapp.musically",
+          "description": null,
+          "appIconColor": 16657493,
+          "targets": [
+            {
+              "version": "43.6.2",
+              "experimental": false
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
       "name": "Override certificate pinning",
       "description": "Overrides certificate pinning, allowing to inspect traffic via a proxy. This patch does not work with Reddit.",
       "use": false,
@@ -1860,9 +1904,7 @@
       "name": "Plus Messenger patches",
       "description": "Ports the Python Plus Messenger patcher to Morphe Manager: premium checks, story privacy, forwarding/saving restrictions, screenshots, sponsored content, banned channel access, secret media, and download parameter tweaks.",
       "use": true,
-      "dependencies": [
-        "BytecodePatch"
-      ],
+      "dependencies": [],
       "compatiblePackages": {
         "org.telegram.plus": null
       },
@@ -2100,6 +2142,50 @@
           "targets": [
             {
               "version": "",
+              "experimental": false
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "SIM spoof",
+      "description": "Spoofs SIM card information returned by Android APIs. Supports TikTok 43.6.2.",
+      "use": true,
+      "dependencies": [
+        "BytecodePatch",
+        "BytecodePatch"
+      ],
+      "compatiblePackages": {
+        "com.ss.android.ugc.trill": [
+          "43.6.2"
+        ],
+        "com.zhiliaoapp.musically": [
+          "43.6.2"
+        ]
+      },
+      "compatibility": [
+        {
+          "name": "TikTok (JP)",
+          "packageName": "com.ss.android.ugc.trill",
+          "description": null,
+          "appIconColor": 16657493,
+          "targets": [
+            {
+              "version": "43.6.2",
+              "experimental": false
+            }
+          ]
+        },
+        {
+          "name": "TikTok",
+          "packageName": "com.zhiliaoapp.musically",
+          "description": null,
+          "appIconColor": 16657493,
+          "targets": [
+            {
+              "version": "43.6.2",
               "experimental": false
             }
           ]

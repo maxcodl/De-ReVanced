@@ -66,7 +66,7 @@ val plusMessengerPatchesPatch = bytecodePatch(
         ) {
             val classDef = findClass(simpleName)
             if (classDef == null) {
-                logger.warning("Plus Messenger patches: $simpleName not found")
+                println("Plus Messenger patches: $simpleName not found")
                 return
             }
 
@@ -299,6 +299,6 @@ val plusMessengerPatchesPatch = bytecodePatch(
             throw PatchException("No Plus Messenger patch points were found. The target version may be unsupported.")
         }
 
-        logger.info("Plus Messenger patches applied $appliedChanges bytecode change(s)")
+        println("Plus Messenger patches applied $appliedChanges bytecode change(s)")
     }
 }
