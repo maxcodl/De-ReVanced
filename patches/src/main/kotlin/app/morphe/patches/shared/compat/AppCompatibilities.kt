@@ -73,6 +73,12 @@ internal object AppCompatibilities {
         appIconColor = 0x000000,
     )
 
+    val PLUS_MESSENGER = Compatibility(
+        name = "Plus Messenger",
+        packageName = "org.telegram.plus",
+        appIconColor = 0x2196F3,
+    )
+
     val NU_NL = Compatibility(
         name = "NU.nl",
         packageName = "nl.sanomamedia.android.nu",
