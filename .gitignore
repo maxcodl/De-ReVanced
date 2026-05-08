@@ -44,3 +44,5 @@ cli.jar
 temp_patcher/
 out-temporary-files/
 test-temporary-files/
+tiktok-*-patched-temporary-files/
+*temporary-files/
